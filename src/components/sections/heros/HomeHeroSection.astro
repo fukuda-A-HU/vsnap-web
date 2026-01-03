@@ -1,38 +1,31 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { Container, Button } from '@components/odyssey-theme';
-import settings from '../../../config/settings.js';
-import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 ---
 
 <Container>
 	<section class="hero-section__section">
 		<div class="hero-section__text">
-				<h1>Welcome to Odyssey</h1>
+				<h1>vsnap</h1>
+				<p class="catch-copy">かわいい子には旅をさせよう</p>
 				<p>
-					A marketing website theme built with <a
-						href="https://astro.build"
-						target="_blank"
-						rel="noreferrer">Astro</a
-					> and carefully crafted for startups and businesses.
+					バーチャルキャラクターと一緒に写真を撮影しよう。AR技術を活用した、新しい体験型アプリです。
 				</p>
 				<div class="hero-btns__container">
-					<Button href="/theme/get-started" customIcon
-						>Get Started
+					<Button href="#" customIcon
+						>今すぐダウンロード
             <Fragment slot="icon">
               <Icon name="ic:baseline-chevron-right"/>
             </Fragment>
             </Button
 					>
-					<Button href="/theme/style-guide" unelevated>Style Guide</Button>
 				</div>
-        {settings.enableThemeSwitcher && <ThemeSwitcher client:only/>}
 		</div>
 		<div class="hero-section__image">
 				<picture>
 					<img
-						src="/assets/images/home/classic-hero.jpg"
-						alt="Astro Odyssey"
+						src="/assets/images/home/earth-hero.jpg"
+						alt="ARキャラクター撮影アプリのスクリーンショット"
 						id="home-hero-image"
 					/>
 				</picture>
@@ -52,6 +45,12 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 	.hero-section__text {
 		justify-self: center;
 		max-width: 25rem;
+	}
+	.catch-copy {
+		font-size: var(--font-size-lg);
+		font-weight: 700;
+		margin: 0.5rem 0 1rem 0;
+		color: var(--theme-primary);
 	}
 	.hero-btns__container {
 		display: flex;
